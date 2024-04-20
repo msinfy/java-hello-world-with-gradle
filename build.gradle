@@ -18,10 +18,9 @@ targetCompatibility = 1.7
 
 dependencies {
     implementation "joda-time:joda-time:2.2"
-    testCompile "junit:junit:4.12"
+    testImplementation "junit:junit:4.12"
 }
 
 task wrapper(type: Wrapper) {
     gradleVersion = '3.5'
 }
-
