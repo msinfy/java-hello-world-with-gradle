@@ -13,11 +13,11 @@ pipeline {
          }
          stage('Build') {
              steps {                  
-                  sh './gradlew clean build'
+                  bat './gradlew.bat clean build'
              }              
              post {
                  always {
-                     jiraSendBuildInfo site: 'bashsquad.atlassian.net'
+                    // jiraSendBuildInfo site: 'bashsquad.atlassian.net'
                  }
              }
          }
