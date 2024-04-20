@@ -1,7 +1,7 @@
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'application'
-apply plugin: 'org.sonarqube' // Added SonarQube plugin
+//apply plugin: 'org.sonarqube' // Added SonarQube plugin
 
 mainClassName = 'hello.HelloWorld'
 
