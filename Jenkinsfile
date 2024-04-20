@@ -15,11 +15,7 @@ pipeline {
              steps {                  
                   bat './gradlew.bat clean build'
              }              
-             post {
-                 always {
-                    // jiraSendBuildInfo site: 'bashsquad.atlassian.net'
-                 }
-             }
+             
          }
      }
  }
