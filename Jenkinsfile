@@ -16,12 +16,6 @@ pipeline {
                 bat './gradlew.bat clean build'
             }
         }
-        stage('Code Analysis') {
-            steps {
-                withSonarQubeEnv('SonarQube') {
-                    bat "sonar-scanner"
-                }
-            }
-        }
+      
     }
 }
