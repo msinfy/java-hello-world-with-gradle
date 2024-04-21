@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    environment {
+        JAVA_HOME = 'C:\\Program Files\\Java\\jdk-17' // Update this with the path to Java 17 installation directory
+    }
     stages {
         stage('Clean Workspace') {
             steps {
