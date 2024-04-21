@@ -26,7 +26,7 @@ pipeline {
                         -Dsonar.projectKey=sample_gradle_java \
                         -Dsonar.projectName=\'sample_gradle_java\' \
                         -Dsonar.host.url=http://localhost:9000 \
-                        -Dsonar.login=sqp_7efe6068a2ba16be8bd78bc1214703290fb639fd'
+                        -Dsonar.login=sqp_c438efc0e62ac2a95d0da2698fcc4abeb19cc2a1'
                 }
             }
         }
