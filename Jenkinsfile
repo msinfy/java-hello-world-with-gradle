@@ -18,10 +18,12 @@ pipeline {
         }
         stage('SonarQube Analysis') {
             steps {
-                // Ensure that SonarQube environment is properly configured
-                withSonarQubeEnv() {
-                    // Run SonarQube analysis task
-                    bat "./gradlew sonar"
+                // Specify the SonarQube installation name
+                script {
+                    def scannerHome = tool 'SonarQube'; // Assuming 'SonarQube' is the installation name
+                    withSonarQubeEnv('SonarQube') {
+                        bat "${scannerHome}/bin/sonar-scanner"
+                    }
                 }
             }
         }
