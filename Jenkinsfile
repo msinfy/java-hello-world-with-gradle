@@ -17,10 +17,13 @@ pipeline {
             }
         }
         stage('SonarQube Analysis') {
-            withSonarQubeEnv() {
-            bat "./gradlew sonar"
-    }
-  }
-      
+            steps {
+                // Ensure that SonarQube environment is properly configured
+                withSonarQubeEnv() {
+                    // Run SonarQube analysis task
+                    bat "./gradlew sonar"
+                }
+            }
+        }
     }
 }
