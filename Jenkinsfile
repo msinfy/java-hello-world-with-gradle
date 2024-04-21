@@ -21,12 +21,12 @@ pipeline {
         }
         stage('SonarQube Analysis') {
             steps {
-                // Specify the SonarQube installation name
                 script {
-                    def scannerHome = tool 'SonarQube'; // Assuming 'SonarQube' is the installation name
-                    withSonarQubeEnv('SonarQube') {
-                        bat "${scannerHome}/bin/sonar-scanner"
-                    }
+                    bat './gradlew.bat sonarqube \
+                        -Dsonar.projectKey=sample_gradle_java \
+                        -Dsonar.projectName=\'sample_gradle_java\' \
+                        -Dsonar.host.url=http://localhost:9000 \
+                        -Dsonar.login=sqp_7efe6068a2ba16be8bd78bc1214703290fb639fd'
                 }
             }
         }
